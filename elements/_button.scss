@@ -1,0 +1,48 @@
+/**
+  @buttons
+------------------------------------------------------
+  base/_buttons.scss
+------------------------------------------------------
+
+
+  Define button elements here.
+
+  Has default button and by each color context.
+
+
+------------------------------------------------------*/
+
+
+// Default button
+.button {
+
+  outline: none;
+  border: none;
+  background-color: $color__gray--light;
+  color: $color__black;
+  padding: $unit/2 $unit;
+  font-size: $font-size--small;
+  cursor: pointer;
+
+  &:focus {
+    box-shadow: 0 0 0 2px rgba($color__gray, .5);
+  }
+
+
+  // Modefie by each color context
+  // example .button--info, .button--primary
+  @each $mode, $color in $color-context-map {
+    &--#{$mode} {
+      @if $mode == 'warning' or $mode == 'primary' {
+        color: darken($color, 45);
+      }@else {
+        color: white;
+      }
+      background-color: $color;
+    
+      &:focus {
+        box-shadow: 0 0 0 2px rgba($color, .5);
+      }
+    }
+  }
+}

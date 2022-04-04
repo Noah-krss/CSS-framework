@@ -1,0 +1,108 @@
+/** @fonts
+------------------------------------------------------
+  base/_fonts.scss
+------------------------------------------------------
+
+  Global fonts varaible, define here font vars and it's
+  weight extensions.
+
+  Has:
+  + sans
+  + serif
+  + mono
+
+------------------------------------------------------*/
+
+
+
+
+
+/** @weight-map 
+------------------------------------------------------
+
+  Font weight map helps to define each weight style
+
+  ------------------------------------------------------*/
+
+$font-weight-map: (
+  "light": 300,
+  "regular": 400,
+  "semi-bold": 600,
+  "bold": 700
+);
+
+
+
+
+
+/** @sans
+------------------------------------------------------
+
+  This is basic sans font
+  
+  example usage: regulat sans on p
+  p {
+    @extend: %sans--regular;  
+  }
+
+------------------------------------------------------*/
+
+$sans: Arial, Helvetica, sans-serif;
+
+@each $weight, $value in $font-weight-map {
+  %sans--#{$weight} {
+    font-family: $sans;
+    font-weight: $value;
+    font-style: normal;
+  }
+}
+
+
+
+
+
+/** @serif
+------------------------------------------------------
+
+  This is basic serif font
+  
+  example usage: regulat serif on p
+  p {
+    @extend: %serif--regular;  
+  }
+
+------------------------------------------------------*/
+
+$serif: georgia, times;
+
+@each $weight, $value in $font-weight-map {
+  %serif--#{$weight} {
+    font-family: $serif;
+    font-weight: $value;
+    font-style: normal;
+  }
+}
+
+
+
+
+/** @mono
+------------------------------------------------------
+
+  This is basic mono font
+  
+  example usage: regulat serif on p
+  p {
+    @extend: %mono--regular;  
+  }
+
+------------------------------------------------------*/
+
+$mono: monospace;
+@each $weight, $value in $font-weight-map {
+  %mono--#{$weight} {
+    font-family: $mono;
+    font-weight: $value;
+    font-style: normal;
+  }
+}

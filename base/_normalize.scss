@@ -1,0 +1,33 @@
+
+// Apply border-box definition & reset margin and padding
+
+* {
+  @extend %sans--regular;
+  &::after,
+  &::before,
+  & {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
+
+
+// Apply display block to new HTML5 elements
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary,
+audio,
+canvas,
+video {
+    display: block;
+}
