@@ -1,0 +1,80 @@
+/**
+  @configs
+------------------------------------------------------
+  base/_config.scss
+------------------------------------------------------
+
+
+  Global configuration variables are defined here. 
+  colors, spacing, grid settings, font sizes...etc
+
+
+------------------------------------------------------*/
+
+// @color
+@import './color';
+
+
+/** @breakpoints
+------------------------------------------------------
+  
+  Define here breakpoint vars. xs, sm, md, lg, xl, xxl
+
+------------------------------------------------------*/
+
+// Define map of breakpoints to help in other functions
+$breakpoints: (
+  xs : 320px,
+  sm : 480px,
+  md : 720px,
+  lg : 1020px,
+  xl : 1200px,
+  xxl: 1920px
+);
+
+
+// Individual breakpoints
+$breakpoint__xs : map-get($breakpoints, xs);
+$breakpoint__sm : map-get($breakpoints, sm);
+$breakpoint__md : map-get($breakpoints, md);
+$breakpoint__lg : map-get($breakpoints, lg);
+$breakpoint__xl : map-get($breakpoints, xl);
+$breakpoint__xxl: map-get($breakpoints, xxl);
+
+
+
+
+/** @unit
+------------------------------------------------------
+  
+  Define here global unit space, this unit help us to 
+  keep space semanticity
+
+------------------------------------------------------*/
+
+$unit: 1.25rem;
+
+
+
+
+/** @font-size
+------------------------------------------------------
+  
+  Define here global font size vars, here are following
+  font sizes:
+
+    + smaller
+    + small
+    + normal
+    + medium
+    + large
+    + larger
+
+------------------------------------------------------*/
+
+$font-size--smaller: 12px;
+$font-size--small: 14px;
+$font-size--normal: 16px;
+$font-size--medium: 20px;
+$font-size--large: 22px;
+$font-size--larger: 26px;

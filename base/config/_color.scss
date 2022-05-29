@@ -1,0 +1,59 @@
+/** @colors
+------------------------------------------------------
+  base/_color.scss
+------------------------------------------------------
+  
+  
+  All color variables are defined here.
+
+  Use real color names here (red, green, blue...etc).
+
+  All declared vars most apply this format: "$color__[name]",
+  also we can create color using a UI context like "error" or
+  "success"
+
+
+------------------------------------------------------*/
+
+$color__black: #08060D;
+$color__darkgray: #121017;
+$color__gray: #3A383F;
+$color__lightgray: #C4C4C4;
+$color__white: #F5F5F5;
+
+$color__red: #CD2D2D;
+$color__yellow: #ECC846;
+$color__green: #2DCD3E;
+$color__blue: #2D94CD;
+$color__fuchsia: #F1264B;
+/** @colors:contextualized
+------------------------------------------------------
+  
+  
+  Our framework works with contextualized color, because
+  multiple entities like buttons, tags, notification are
+  associated with a concept, so for example: success
+  button has green color, warning notification it's
+  associasted with yellow color...etc
+
+  The following map list all color context we worke with
+
+
+------------------------------------------------------*/
+
+$color__context-map: (
+  "primary": $color__fuchsia,
+  "secondary": $color__darkgray,
+  "info": $color__blue,
+  "success": $color__green,
+  "warning": $color__yellow,
+  "danger": $color__red
+);
+
+// Individual contextualized colors
+$color__primary: map-get($color__context-map, "primary");
+$color__seconday: map-get($color__context-map, "secondary");
+$color__info: map-get($color__context-map, "info");
+$color__success: map-get($color__context-map, "success");
+$color__warning: map-get($color__context-map, "warning");
+$color__danger: map-get($color__context-map, "danger");

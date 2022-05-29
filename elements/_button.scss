@@ -18,7 +18,7 @@
 
   outline: none;
   border: none;
-  background-color: $color__gray--light;
+  background-color: $color__lightgray;
   color: $color__black;
   padding: $unit/2 $unit;
   font-size: $font-size--small;
@@ -31,7 +31,8 @@
 
   // Modefie by each color context
   // example .button--info, .button--primary
-  @each $mode, $color in $color-context-map {
+        @each $mode,
+        $color in $color__context-map {
     &--#{$mode} {
       @if $mode == 'warning' or $mode == 'primary' {
         color: darken($color, 45);
