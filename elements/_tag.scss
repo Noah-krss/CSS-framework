@@ -1,11 +1,11 @@
 /**
-  @buttons
+  @tag
 ------------------------------------------------------
-    elements/_buttons.scss
+  elements/_tag.scss
 ------------------------------------------------------
 
 
-  Define button elements here.
+  Define tag elements here.
 
   Has default button and by each color context.
 
@@ -13,34 +13,33 @@
 ------------------------------------------------------*/
 
 
-// Default button
-.button {
+
+.tag {
+  display: inline-block;
   border-radius: 2px;
-  outline: none;
-  border: none;
+  padding: $unit/3 $unit;
+  font-size: $font-size--smaller;
   background-color: $color__lightgray;
   color: $color__black;
-  padding: $unit/2 $unit*2;
-  font-size: $font-size--small;
-  cursor: pointer;
 
-  &:focus {
-    box-shadow: 0 0 0 2px rgba($color__gray, .5);
-  }
 
 
   // Modefie by each color context
-  // example .button--info, .button--primary
-        @each $mode,
-        $color in $color__context-map {
+  // example .tag--info, .tag--primary
+  @each $mode,
+  $color in $color__context-map {
     &--#{$mode} {
+
       @if $mode =='warning' {
         color: darken($color, 45);
-      }@else {
+      }
+
+      @else {
         color: white;
       }
+
       background-color: $color;
-    
+
       &:focus {
         box-shadow: 0 0 0 2px rgba($color, .5);
       }
