@@ -1,0 +1,34 @@
+/** @fonts
+------------------------------------------------------
+  base/_fonts.scss
+------------------------------------------------------
+
+  3 Mixins to controll all media querie cases
+
+  + breakpoint-least($min-size): apply to min-width
+  + breakpoint-max($max-size): apply to max-width
+  + breakpoint-between($min, $max): apply between to sizes
+
+*/
+
+@mixin breakpoint-least($size) {
+  @media screen and (min-width: $size) {
+    @content;
+  }
+}
+
+
+
+@mixin breakpoint-max($size) {
+  @media screen and (max-width: $size) {
+    @content;
+  }
+}
+
+
+
+@mixin breakpoint-least($size1, $size2) {
+  @media screen and (min-width: $size1) and (max-size: $size2) {
+    @content;
+  }
+}
