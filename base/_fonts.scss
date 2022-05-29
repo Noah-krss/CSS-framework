@@ -47,7 +47,7 @@ $font-weight-map: (
 
 ------------------------------------------------------*/
 
-$sans: Arial, Helvetica, sans-serif;
+$sans: "Roboto", Helvetica, sans-serif;
 
 @each $weight, $value in $font-weight-map {
   %sans--#{$weight} {
