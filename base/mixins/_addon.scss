@@ -1,0 +1,26 @@
+/** @breakpoint
+------------------------------------------------------
+  base/mixins/_addon.scss
+------------------------------------------------------
+
+  Apply addon styles to group of same elements
+
+*/
+
+@mixin addon($childElement) {
+  display: block;
+  font-size: 0px;
+  margin: 1rem; // for test
+
+  &>.#{$childElement} {
+    border-radius: 0;
+
+    &:first-child {
+      border-radius: 2px 0 0 2px;
+    }
+
+    &:last-child {
+      border-radius: 0 2px 2px 0;
+    }
+  }
+}

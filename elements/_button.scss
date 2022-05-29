@@ -47,3 +47,9 @@
     }
   }
 }
+.buttons {
+
+  &--addon {
+    @include addon('button');
+  }
+}
