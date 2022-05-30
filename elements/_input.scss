@@ -1,0 +1,73 @@
+/**
+  @input
+------------------------------------------------------
+    elements/_input.scss
+------------------------------------------------------
+
+
+  Define input elements here.
+
+  Has default input and by each color context.
+
+
+------------------------------------------------------*/
+
+
+.input-control {
+  padding: $unit;
+  color: $color__lightgray;
+
+  &__input {
+    color: inherit;
+    padding: $unit/2;
+    background-color: $color__darkgray;
+    outline: none;
+    border: none;
+    display: block;
+    width: 100%;
+    border-radius: 2px;
+
+    &::placeholder {
+      color: $color__gray;
+    }
+
+    &:focus {
+      outline: 2px solid $color__gray;
+    }
+  }
+
+  &__label {
+    font-size: $font-size--small;
+    display: block;
+    margin-bottom: $unit/2;
+    color: inherit;
+    @extend %sans--semi-bold;
+  }
+
+  & input[type="checkbox"] {
+    display: none;
+
+    &:checked~label[role="checkbox"] {
+      padding: 2px;
+      border-color: $color__info;
+      &::after {
+        content: "";
+        display: block;
+        width: 8px;
+        height: 8px;
+        background-color: $color__info;
+      }
+    }
+  }
+
+  & label[role="checkbox"] {
+    display: inline-block;
+    width: $font-size--small;
+    height: $font-size--small;
+    font-size: 0px;
+    margin-right: $unit/3;
+    background-color: $color__darkgray;
+    border: 1px solid $color__gray;
+    border-radius: 2px;
+  }
+}

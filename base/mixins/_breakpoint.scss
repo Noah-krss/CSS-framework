@@ -1,6 +1,6 @@
 /** @breakpoint
 ------------------------------------------------------
-                base/mixins/_breakpoint.scss
+base/mixins/_breakpoint.scss
 ------------------------------------------------------
 
   3 Mixins to controll all media querie cases
@@ -17,15 +17,11 @@
   }
 }
 
-
-
 @mixin breakpoint-max($size) {
   @media screen and (max-width: $size) {
     @content;
   }
 }
-
-
 
 @mixin breakpoint-least($size1, $size2) {
   @media screen and (min-width: $size1) and (max-size: $size2) {
