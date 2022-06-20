@@ -50,6 +50,7 @@
     &:checked~label[role="checkbox"] {
       padding: 2px;
       border-color: $color__info;
+
       &::after {
         content: "";
         display: block;
@@ -60,8 +61,8 @@
     }
   }
 
-  & label[role="checkbox"] {
-    display: inline-block;
+& label[role="checkbox"] {
+  display: inline-block;
     width: $font-size--small;
     height: $font-size--small;
     font-size: 0px;
@@ -69,5 +70,34 @@
     background-color: $color__darkgray;
     border: 1px solid $color__gray;
     border-radius: 2px;
+  }
+}
+.input-control {
+  & input[type="radio"] {
+    display: none;
+
+    &:checked~label[role="radio"] {
+      padding: 2px;
+      border-color: $color__info;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 8px;
+        height: 8px;
+        background-color: $color__info;
+      }
+    }
+  }
+
+  & label[role="radio"] {
+    display: inline-block;
+    width: $font-size--small;
+    height: $font-size--small;
+    font-size: 0px;
+    margin-right: $unit/3;
+    background-color: $color__darkgray;
+    border: 1px solid $color__gray;
+    border-radius: 20px;
   }
 }
